@@ -48,3 +48,32 @@ Within the AnsiCommand class, the ability to undo the change will be available.
 
 Furthermore, due to the nature of terminal commands, autocorrect may not be desired in all situations. Thus, using boolean logic,
 the autocorrect feature can be turned on and off and the status is displayed in the PS1.
+
+The autocorrect will have one class with one instance variable being the word to be checked.
+One instance method to determine if the word to be checked is in the dictionary.
+Another instance method to send the word to Bing as an API request and return the autocorrected
+suggestion if there is one.
+
+**Required python dependencies:**
+*requests:* Allows API requests to be posted to Bing and retrieve the results
+*json:* Allows the API result to be processed using Json for improved accessibility
+
+
+### Solution 3 - Autocomplete:
+
+Much like the autocorrect feature, the autocomplete system will retrieve autocomplete suggestions as the user types in the terminal.
+A trie data structure has been implemented to achieve thi.
+
+The trie utilises nodes which contain the text for that node, a dictionary which holds all child nodes and variable to determine if it is a whole word
+or just a prefix.
+
+As the user types into the terminal, the typed string will be sent to the autocomplete trie and treated as a prefix.
+It will start from the root node and go character by character down the tree if there are matching nodes. If there isn't a node for that particular
+sequence of characters, the autocomplete feature will return an empty list.
+
+However, if for a given preifx there are complete words, it will return a list of available autocomplete suggestions.
+
+There are two classes for this solution, a node class which is created everytime a command or word inserted into the trie. 
+The other class which is the actual trie data structure, will obtain the prefix as input and search the whole data structure for
+corresponding commands that match that prefix.
+
