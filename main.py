@@ -8,7 +8,7 @@ import config
 
 
 def main():
-    config.files_location = os.getcwd() + '/'                             # Saves the absolute working directory to a variable in config.py
+    config.files_location = os.getcwd() + '/'                       # Saves the absolute working directory to a variable in config.py
     config.list_of_commands = PrefixTree.read_all_commands()        # Saves all the autocomplete commands so its only done once 
     config.dictionary_list = spellcheck_API.read_dictionary_text()  # Saves the dictionary into a list so its only done once 
     

@@ -77,3 +77,19 @@ There are two classes for this solution, a node class which is created everytime
 The other class which is the actual trie data structure, will obtain the prefix as input and search the whole data structure for
 corresponding commands that match that prefix.
 
+
+## Known Bugs and Issues:
+
+1. Unable to run commands that do not naturally end. A timeout feature has been implemented so that the application doesn't hang.
+Programs like vim, nano and ping which continue to run until it is ended manually cannot be implemented. A fix for this would be to not
+create a subprocess for these commands, instead to use os.system() though the application will not have access to stdout and stderr. I 
+will look to utilise regex and fix this bug in the future.
+
+2. Text that wraps over multiple lines if it is on the last row of the terminal will not be displayed correctly. This is due to
+how the terminal records row numbers, it doesn't continue to increase as the terminal scrolls down, it keeps the same max row number and thus
+the application is unable to clear the text correctly. Unable to fix at this time, will continue to work on it.
+
+3. If  the width of the terminal is changed during a command, issues with text wrapping occurs. A fix is available, however, it will slow
+down the application due to reading from the buffer. Thus, if the width of the terminal is changed, the user should start a new command.
+
+
