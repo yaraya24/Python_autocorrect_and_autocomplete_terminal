@@ -54,18 +54,17 @@ class PrefixTree:
         If for a given prefix there are no words or commands, it will return an empty list.
         Will then use a recursive method to obtain all the valid words for a given prefix.
         """
-        if len(prefix) > 0:
-            commands = []
-            current_node = self.root
-            for char in prefix:
-                if char not in current_node.children:
-                    return []
-                current_node = current_node.children[char]
-
-            self.__child_words_for(current_node, commands)
-            return commands
-        else:
+        if len(prefix) == 0:
             return []
+        commands = []
+        current_node = self.root
+        for char in prefix:
+            if char not in current_node.children:
+                return []
+            current_node = current_node.children[char]
+
+        self.__child_words_for(current_node, commands)
+        return commands
 
 
     def __child_words_for(self, node, words):
