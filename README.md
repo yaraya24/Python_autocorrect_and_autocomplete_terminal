@@ -11,7 +11,7 @@ utilities to achieve this.
 
 All of the above features require that the terminal reads user input as they type, rather then pressing enter for the request to be processed.
 
-**Solution 1**: 
+### Solution 1: 
 To recereate the terminal in the image of bash, I utilised ANSI Escape Commands and set the terminal to raw.
 This allows the application to read the user input one character at a time and process the request.
 Upon a regular character being entered (alphanumeric), it will, like any text editor, display that character and move the cursor to the correct position.
@@ -21,7 +21,9 @@ This facilitates autcomplete and autocorrect as python will then be able to run 
 There is a class named AnsiCommand that will have instance varaibles that track the relevent information to achieve this.
 Each instance of the class is a command in the terminal, pressing enter will create a new instance of the class.
 
-Required python dependencies:
+**Required python dependencies:**
+
+*sys:*   
 
 
 **Solution 2**:
