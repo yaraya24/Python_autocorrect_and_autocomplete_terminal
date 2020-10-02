@@ -92,4 +92,11 @@ the application is unable to clear the text correctly. Unable to fix at this tim
 3. If  the width of the terminal is changed during a command, issues with text wrapping occurs. A fix is available, however, it will slow
 down the application due to reading from the buffer. Thus, if the width of the terminal is changed, the user should start a new command.
 
+4. The autocomplete feature doesn't take into account when the command was last used, thus recent commands that are more likely to be 
+requested aren't the first ones that are displayed. An easy fix would be to implement a numbering system so that recent commands take precedent.
+Will be implemented soon.
+
+5. If a bug occurs and crashes the program, the terminal wil be broken and the command 'stty sane' needs to be entered. Using testing,
+I have attempted to minimise crashes.
+
 
