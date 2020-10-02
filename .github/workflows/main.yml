@@ -20,7 +20,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run Tests
         run: | #this will run the test within tests directory
-          python -m unittest discover src/
+          python -m unittest discover 
 
   deployment: # Another job which will deploy the application onto a server, vm, whatever.
     needs: test_suite # this job cannot run unless test_suite, the previous job, is done and passes
