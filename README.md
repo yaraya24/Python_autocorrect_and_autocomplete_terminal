@@ -10,6 +10,7 @@ Use the application like a regular terminal.
 **Ctrl-Z:** Undoes any autocorrections
 **Ctrl-O:** Turns autocorrect on and off
 **Up and Down Arrows:** Cycles through autocomplete suggestions
+**Tab:** To select the highlighted autocomplete suggestion
 
 
 **Develop and Describe an algorithmic solution for an application that utilises two way communication over a network.**
