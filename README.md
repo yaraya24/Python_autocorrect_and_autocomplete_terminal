@@ -7,13 +7,9 @@ Run the command: python3 main.py
 
 Use the application like a regular terminal.
 
-If text that is typed is autocorrected, it can be undone by pressing: Control-Z
-
-Autocorrect can be turned on and off by pressing: Control-O (The PS1 will display the status, for it to be updated, press enter to get a new PS1)
-
-Autocomplete suggestions will be displayed in yellow as you use the application, to cycle through suggestions, use the up and down arrows.
-
-
+**Ctrl-Z:** Undoes any autocorrections
+**Ctrl-O:** Turns autocorrect on and off
+**Up and Down Arrows:** Cycles through autocomplete suggestions
 
 
 **Develop and Describe an algorithmic solution for an application that utilises two way communication over a network.**
@@ -40,13 +36,13 @@ Each instance of the class is a command in the terminal, pressing enter will cre
 
 **Required python dependencies:**
 
-*sys:* Used to write to the terminal as stdout and read from the stdin
-*tty:* Changes the terminal mode to raw to allow access to stdin and stdout
-*termios:* Provides access to the terminal and read the cursor position
-*os:* Allows operating system commands like reseting the terminal, change directory and obtain the current working directory
-*subprocess:* Allows python to create a child process to run the commands of the custom terminal 
-*getpass:*  Obtains the username for the PS1 in an effort to emulate bash
-*re:* Regex used to find if the command is 'cd' and to read the cursor position
+1. *sys:* Used to write to the terminal as stdout and read from the stdin
+2. *tty:* Changes the terminal mode to raw to allow access to stdin and stdout
+3. *termios:* Provides access to the terminal and read the cursor position
+4. *os:* Allows operating system commands like reseting the terminal, change directory and obtain the current working directory
+5. *subprocess:* Allows python to create a child process to run the commands of the custom terminal 
+6. *getpass:*  Obtains the username for the PS1 in an effort to emulate bash
+7. *re:* Regex used to find if the command is 'cd' and to read the cursor position
 
 ### Solution 2 - Autocorrect:
 
@@ -70,8 +66,8 @@ Another instance method to send the word to Bing as an API request and return th
 suggestion if there is one.
 
 **Required python dependencies:**
-*requests:* Allows API requests to be posted to Bing and retrieve the results
-*json:* Allows the API result to be processed using Json for improved accessibility
+1. *requests:* Allows API requests to be posted to Bing and retrieve the results
+2. *json:* Allows the API result to be processed using Json for improved accessibility
 
 
 ### Solution 3 - Autocomplete:
@@ -124,4 +120,4 @@ can add the word to the dictionary.txt file.
 3. Improve autocomplete suggestions so that recent or more popular commands are displayed first.
 
 
-
+**NOTE**: Cannot implement tests for ansi_command.py due to requiring an opened terminal.

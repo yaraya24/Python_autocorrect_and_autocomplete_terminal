@@ -19,14 +19,14 @@ class TestCases(unittest.TestCase):
         self.assertIsNot(TestCases.test_case1.search_trie('ls -la'), False, "Shouldn't be False")
         self.assertFalse(TestCases.test_case1.search_trie('ls /la'), "Should be False as word not in command")
 
-        self.assertEquals(TestCases.test_case1.auto_complete('ls'), ['ls -la', 'ls -las'], "Should return the lists")
-        self.assertEquals(TestCases.test_case1.auto_complete('cd'), ['cd home/user1', 'cd home/user2'], "Should return the lists")
-        self.assertEquals(TestCases.test_case1.auto_complete('cd home/user1'), ['cd home/user1'], "Should return the lists")
-        self.assertEquals(TestCases.test_case1.auto_complete('cd home/user'), ['cd home/user1', 'cd home/user2'], "Should return the lists")
-        self.assertEquals(TestCases.test_case1.auto_complete('cd home/account'), [], "Should return empty list")
-        self.assertEquals(TestCases.test_case1.auto_complete('python2'), [], "Should return empty list")
+        self.assertEqual(TestCases.test_case1.auto_complete('ls'), ['ls -la', 'ls -las'], "Should return the lists")
+        self.assertEqual(TestCases.test_case1.auto_complete('cd'), ['cd home/user1', 'cd home/user2'], "Should return the lists")
+        self.assertEqual(TestCases.test_case1.auto_complete('cd home/user1'), ['cd home/user1'], "Should return the lists")
+        self.assertEqual(TestCases.test_case1.auto_complete('cd home/user'), ['cd home/user1', 'cd home/user2'], "Should return the lists")
+        self.assertEqual(TestCases.test_case1.auto_complete('cd home/account'), [], "Should return empty list")
+        self.assertEqual(TestCases.test_case1.auto_complete('python2'), [], "Should return empty list")
 
-        self.assertEquals(config.list_of_commands[0], 'clear', 'First command should be clear')
+        self.assertEqual(config.list_of_commands[0], 'clear', 'First command should be clear')
 
         
 

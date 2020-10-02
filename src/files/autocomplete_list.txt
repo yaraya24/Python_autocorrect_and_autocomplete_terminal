@@ -20,3 +20,4 @@ cd random_prac
 ls /home/yaraya24/term2_app
 cd home
 cd yaraya24
+cd //
