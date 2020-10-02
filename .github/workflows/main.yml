@@ -34,8 +34,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }} # .SSH_KEY is the variable that the private key is saved within github
           port: 22 #port 22 is the port for ssh
           script: | # once connected, run these following commands. Note: python, pip, venv were all installeed and updated within the vm manually
-            rm -rf python_terminal
+            rm -rf Python_autocorrect_and_autocomplete_terminal
             git clone https://github.com/yaraya24/Python_autocorrect_and_autocomplete_terminal.git
-            python3.8 -m venv /home/github-actions/python_terminal/venv
-            source /home/github-actions/python_terminal/venv/bin/activate
-            pip3 install -r /home/github-actions/python_terminal/requirements.txt
+            python3.8 -m venv /home/github-actions/Python_autocorrect_and_autocomplete_terminal/venv
+            source /home/github-actions/Python_autocorrect_and_autocomplete_terminal/venv/bin/activate
+            pip3 install -r /home/github-actions/Python_autocorrect_and_autocomplete_terminal/requirements.txt
