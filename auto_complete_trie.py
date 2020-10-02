@@ -82,10 +82,16 @@ class PrefixTree:
         """ Static method that will save all the commands in the list_of_commands list to a text file.
         Using config.files_location to determine the absolute path due to application being able 
         to change directories.
+
+        Note: You may not have permission to save to this file.
         """
-        with open(config.files_location + 'files/autocomplete_list.txt', 'w') as write:
-            for command in config.list_of_commands:
-                write.write(command + '\n')
+        try:
+            with open(config.files_location + 'files/autocomplete_list.txt', 'w') as write:
+                for command in config.list_of_commands:
+                    write.write(command + '\n')
+        except PermissionError:
+            print("You do not have write permission, unfortunately commands will not be saved")
+
 
     @staticmethod
     def read_all_commands():
