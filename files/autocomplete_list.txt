@@ -1,0 +1,22 @@
+clear
+ping google.com -c2
+ping yahoo.com -c1
+ls -al
+cat main.py
+cd ..
+cd /home/yaraya24
+cd /etc
+cat passwd
+pip freeze
+cd term2_app
+pip freeze > requirements.txt 
+cat requirements.txt
+git status
+git add main.py
+git commit -m "Added the control flow for the main.py module"
+git log
+cd /home/yaraya24/.ssh
+cd random_prac
+ls /home/yaraya24/term2_app
+cd home
+cd yaraya24
