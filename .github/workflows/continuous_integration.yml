@@ -2,7 +2,7 @@ name: CI/CD
 
 on:
   push:
-    branches: [ master ] # specifies that it only deploys when pushing to the maste
+    branches: [ master ] # specifies that it only deploys when pushing to the mast
 
 jobs:
   test_suite: # name of the job
