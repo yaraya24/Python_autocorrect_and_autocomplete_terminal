@@ -1,0 +1,24 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [ master ] # specifies that it only deploys when pushing to the master
+
+jobs:
+  test_suite: # name of the job
+    runs-on: ubuntu-latest # what VM would you like github actions to use 
+    steps:
+      - name: Checkout Branch # just a name for the action withing the job
+        uses: actions/checkout@v2 # some thing someone created that allows you to checkout
+      - name: Set Up Python 3.8 # another action
+        uses: actions/setup-python@v2 # inbuilt feature that will install python3 within the VM doing the testing
+        with:
+          python-version: 3.8
+      - name: Install dependencies # another action within test_stuite job
+        run: | # this will install the dependencies for the python installed above, bash scripting if to use requirements.txt if available
+          python -m pip install --upgrade pip 
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run Tests
+        run: | #this will run the test within tests directory
+          python -m unittest discover tests/
+
