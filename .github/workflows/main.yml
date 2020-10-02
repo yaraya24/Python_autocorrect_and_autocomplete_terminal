@@ -38,4 +38,4 @@ jobs:
             git clone https://github.com/yaraya24/Python_autocorrect_and_autocomplete_terminal.git
             python3.8 -m venv /home/github-actions/python_terminal/venv
             source /home/github-actions/python_terminal/venv/bin/activate
-            pip install -r /home/github-actions/python_terminal/requirements.txt
+            pip3 install -r /home/github-actions/python_terminal/requirements.txt
