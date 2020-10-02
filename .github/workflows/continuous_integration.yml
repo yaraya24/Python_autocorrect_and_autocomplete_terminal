@@ -20,5 +20,5 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run Tests
         run: | #this will run the test within tests directory
-          python -m unittest discover tests/
+          python -m unittest discover 
 

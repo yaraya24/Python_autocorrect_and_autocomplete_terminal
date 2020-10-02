@@ -48,7 +48,6 @@ Each instance of the class is a command in the terminal, pressing enter will cre
 *getpass:*  Obtains the username for the PS1 in an effort to emulate bash
 *re:* Regex used to find if the command is 'cd' and to read the cursor position
 
-
 ### Solution 2 - Autocorrect:
 
 The autocorrect feature will work by being supplied a word that will be checked if it is correctly or incorrectly spelt.
