@@ -1,5 +1,21 @@
 # README
 
+
+## How to use:
+
+Run the command: python3 main.py 
+
+Use the application like a regular terminal.
+
+If text that is typed is autocorrected, it can be undone by pressing: Control-Z
+
+Autocorrect can be turned on and off by pressing: Control-O (The PS1 will display the status, for it to be updated, press enter to get a new PS1)
+
+Autocomplete suggestions will be displayed in yellow as you use the application, to cycle through suggestions, use the up and down arrows.
+
+
+
+
 **Develop and Describe an algorithmic solution for an application that utilises two way communication over a network.**
 
 The application is an autocorrect and autocomplete system for the terminal using python. It can be broken down into three main 
@@ -96,7 +112,17 @@ down the application due to reading from the buffer. Thus, if the width of the t
 requested aren't the first ones that are displayed. An easy fix would be to implement a numbering system so that recent commands take precedent.
 Will be implemented soon.
 
-5. If a bug occurs and crashes the program, the terminal wil be broken and the command 'stty sane' needs to be entered. Using testing,
-I have attempted to minimise crashes.
+5. If a bug occurs and crashes the program, the terminal wil be broken and the command 'stty sane' needs to be entered. Alternatively, you can
+close the terminal and restart it.Using testing,I have attempted to minimise crashes. 
+
+## New features to implement:
+
+1. The ability to add words to the dictionary so that it doesn't autocorrect words users don't wish it to. Right now you 
+can add the word to the dictionary.txt file.
+
+2. Add the ability to run programs that don't end as explained above.
+
+3. Improve autocomplete suggestions so that recent or more popular commands are displayed first.
+
 
 
